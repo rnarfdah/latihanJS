@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <input type="text" id="numb">
+        <button onclick="ambil()" >Klik</button>
+        <p id="hasil"></p>
+        <script>
+            function benar(n){
+                for(var i = 0 ; i < n;i++){
+                    var y = document.createTextNode("masukan nilai : " + (i + 1))
+                    var x = document.createElement("input");
+                    var br = document.createElement("br");
+                    x.setAttribute("type", "text");
+                    x.setAttribute("id","inp" + i);
+                    document.body.appendChild(y);  
+                    document.body.appendChild(x);  
+                    document.body.appendChild(br);   
+                }
+                var btn = document.createElement("button");
+                var t = document.createTextNode("Hitung");
+                btn.appendChild(t);
+                btn.onclick = function(){
+                    max = 0
+                    total = 0
+                    for(var i = 0 ; i < n; i++){
+                        tmp = parseInt(document.getElementById("inp"+i).value)
+                        if(tmp > max){
+                            max = tmp
+                        }
+                        total = total + tmp
+                    }                    
+                    var hasil = "Rata: " + (total /n)
+                    document.getElementById("hasil").innerHTML = "Rata: "+hasil + ", Max: "+max    
+                    //alert(hasil) 
+                }
+                document.body.appendChild(btn); 
+            }
+            function ambil(){
+                var nilai = document.getElementById("numb").value
+                if(parseInt(nilai)>=1 && parseInt(nilai)<=10){
+                    benar(parseInt(nilai));
+                }
+            }
+        </script>
+    </body>
+</html>

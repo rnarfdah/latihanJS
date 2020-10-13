@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="div1"></div>
+    <div id ="div2"></div>
+    <div id ="div2"></div>
+    <div id ="div5"></div>
+
+    <script>
+        var var1 = 5 // otomaatis jadi bil. bulat
+        var var2 = 6.0 // otomaatis jadi float
+        var var1 = "Nilai : " // otomaatis jadi string
+        document.getElementById("div1").innerHTML = var1;
+        document.getElementById("div2").innerHTML = var1+var2;
+
+        var suhuTubuh = 34 // suhu= 34
+        if(suhuTubuh>=37.2) {
+            document.getElementById("div3").innerHTML = "suhu tubuh tinggi";
+
+        }
+        else if(suhuTubuh >=33) {
+            document.getElementById("div3").innerHTML = "suhu tubuh normal";
+        }
+        else {
+            document.getElementById("div3").innerHTML= "Nan"
+        }
+
+//          buat program faktor suatu bilangan
+// n = 20
+// faktor: 1,2,4,5,10,20
+// n = 100
+// faktor: 1,2,3,4,10,25,50,100
+// algoritma:
+// 1. perulangan 1(i),2(i),3(i),.... n
+// 2. settiap perulangan, cek apakah n%1==0 (modulo)
+// 3. jika T maka i adalah faktpr dari n 
+        var n =20;
+        tmp="";
+        for(var i=1;i<=n;i++) {
+            if(n%i==0) {
+                tmp = tmp + i + "adalah faktor dari " +n + "</br>"
+            }
+        }
+        document.getElementById("div5").innerHTML = tmp;
+
+    </script>
+</body>
+</html>

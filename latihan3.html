@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <h1>Mencari KPK (kelipatan Persekutuan terKecil)</h1>
+        <br>
+        <h2>Masukkan nomor 1</h2>
+        <input type="number" id="numb1">
+        <br>
+        <h2>Masukkan nomor 2</h2>
+        <input type="number" id="numb2">
+
+        <button type="button" onclick="hitung()">submit</button>
+
+        <div id="tampilhasil">
+
+        </div>
+
+        <script>
+            function hitung() {
+                var n1 = document.getElementById("numb1").value;
+                var n2 = document.getElementById("numb2").value;
+                var h = document.getElementById("tampilhasil");
+                let min = Math.min(n1,n2);
+                while(min>=2) {
+                    if (n1%min === 0 && n2%min === 0) {
+                        h.innerHTML = (n1*n2)/min;
+                    }
+                    min--;
+                }
+            //    h.innerHTML = (n1*n2);
+
+              
+            }
+        </script>
+    </body>
+</html>

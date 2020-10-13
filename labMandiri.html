@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+   <p>silahkan input nomor 1 dan 10:</p>
+   <input id="numb" type="number">
+   <button type="button" onclick="cek()">Submit</button>
+    </form>
+
+    <div id="hasilCek">
+
+    </div>
+
+    <script>
+        function cek() {
+ 
+        var cek = document.getElementById("numb").value;
+        var hc = document.getElementById("hasilCek");
+            if (cek<1 || cek>10) {
+                for(i=0;i<5;i++) {
+                hc.innerHTML += "input yang anda masukkan salah" + "<br/>";
+              
+                }
+            }
+            else {
+                for(i=0;i<5;i++) {
+            hc.innerHTML += "input yang anda masukkan benar" + "<br/>";
+            }
+        }
+        }
+        
+
+    </script>
+</body>
+</html>
